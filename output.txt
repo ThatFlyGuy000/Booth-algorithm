@@ -1,0 +1,1 @@
+Decimal Answer: 4 and  Binary: 000000000000000000000100
