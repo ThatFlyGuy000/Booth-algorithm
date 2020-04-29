@@ -1,5 +1,4 @@
 def rightShift(numbers):
-  #right shifting lsb of a and b into b and c respectively
   a,b,c = numbers
 
   newA = a[0] + a[0:-1]
@@ -63,8 +62,6 @@ def two_compliment(num):
 
 # binary
 def binary(num):
-	# if positive gie its binary
-	#if the integer n is negative its twos_complement is to be returned
 	if(num>=0):
 		temp = bin(num)[2:]
 		return "0"*(12 - len(temp)) + temp
@@ -87,9 +84,9 @@ def multiply(num1, num2):
 			ac = addition([ac, m_comp])
 		ac, q, q_n1 = rightShift([ac, q, q_n1])
 		sc-=1
-	ans = ac+q # adds rightshift result to accumulator
+	ans = ac+q 
 	if(ac[0]=="0"):
-		final = int(ans, 2) # convert string into int with base as 2
+		final = int(ans, 2)
 	else:
 		final = -1*int(two_compliment(ans), 2)
 	return [final, ans]
